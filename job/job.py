@@ -64,8 +64,9 @@ try:
     response = job_agent.invoke({
         "messages": [{"role": "user", "content": f"Job Title: {job_title}\nJob Description: {job_description}"}]
     })
-    res = response['structured_response'].model_dump_json()
-    with open("job_profile.json", "w") as f:
-        json.dump(res, f, indent=4, ensure_ascii=False)
+    res = json.dumps(response['structured_response'].model_dump(), indent=4)
+    res = json.loads(res)
+    with open("job_profile.json", "w" , encoding='utf-8') as f:
+        json.dump(res, f, indent=4, ensure_ascii=False) 
 except Exception as e:
-    print(f"Error: {e}")
+    print(f">>> Error")

@@ -9,12 +9,15 @@ class JobClassification(BaseModel):
     work_arrangement: Literal["Remote", "On-site", "Hybrid", "Not specified"]
     location: Optional[str] = None
 
-
+class SkillRequirement(BaseModel):
+    skill: str
+    category: str          # technical / soft
+    importance: str        # critical / high / medium / low
+    evidence: str          # where it came from in the JD
 class Skills(BaseModel):
-    required_technical: List[str]
-    required_soft: List[str]
-    preferred_technical: List[str]
-    preferred_soft: List[str]
+    required: list[SkillRequirement]
+    preferred: list[SkillRequirement]
+    resume_keywords: list[str]
 
 
 class ExperienceRequirement(BaseModel):
