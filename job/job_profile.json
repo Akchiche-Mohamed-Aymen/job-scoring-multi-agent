@@ -1,297 +1,237 @@
 {
-    "job_classification": {
-        "job_title": "AI Engineer",
-        "domain": "AI Engineering",
-        "seniority": "Not specified",
-        "job_type": "Full-time",
-        "work_arrangement": "Not specified",
-        "location": "Sunnyvale, CA"
-    },
-    "skills": {
-        "required": [
-            {
-                "skill": "Shuri",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience with Apple developmental tools such as Shuri"
-            },
-            {
-                "skill": "Claude Code",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience with Apple developmental tools such as Claude Code"
-            },
-            {
-                "skill": "Apple GitHub",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience with Apple developmental tools such as Apple GitHub"
-            },
-            {
-                "skill": "Conductor",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience with Apple developmental tools such as Conductor"
-            },
-            {
-                "skill": "DevX",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience with Apple developmental tools such as DevX"
-            },
-            {
-                "skill": "Analytical skills",
-                "category": "Soft Skill",
-                "importance": "high",
-                "evidence": "Strong analytical skills"
-            },
-            {
-                "skill": "ML models",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "hands-on experience in using ML models"
-            },
-            {
-                "skill": "Prompt engineering",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Strong prompt engineering skills to improve and optimize model outputs"
-            },
-            {
-                "skill": "Vision Language Models",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Experience with Vision Language Models (VLMs) for computer vision use cases"
-            },
-            {
-                "skill": "Computer Vision",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Experience with Vision Language Models (VLMs) for computer vision use cases"
-            },
-            {
-                "skill": "Git",
-                "category": "DevOps/Tools",
-                "importance": "high",
-                "evidence": "Knowledge of Git, CI/CD tools, and cloud platforms for deployment and version control"
-            },
-            {
-                "skill": "CI/CD",
-                "category": "DevOps/Tools",
-                "importance": "high",
-                "evidence": "Knowledge of Git, CI/CD tools, and cloud platforms for deployment and version control"
-            },
-            {
-                "skill": "Cloud platforms",
-                "category": "DevOps/Tools",
-                "importance": "high",
-                "evidence": "Knowledge of Git, CI/CD tools, and cloud platforms for deployment and version control"
-            },
-            {
-                "skill": "Access Manager",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Knowledge of Apple operational tools including Access Manager"
-            },
-            {
-                "skill": "Sentry",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Knowledge of Apple operational tools including Sentry"
-            },
-            {
-                "skill": "PagerDuty",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Knowledge of Apple operational tools including PagerDuty"
-            },
-            {
-                "skill": "HelpCentral",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Knowledge of Apple operational tools including HelpCentral"
-            },
-            {
-                "skill": "Radar",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience working with Apple internal systems such as Radar"
-            },
-            {
-                "skill": "Box",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience working with Apple internal systems such as Box"
-            },
-            {
-                "skill": "Wrike",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience working with Apple internal systems such as Wrike"
-            },
-            {
-                "skill": "Quip",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Experience working with Apple internal systems such as Quip"
-            },
-            {
-                "skill": "GenAI tools",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Integrate GenAI tools (ChatGPT, Claude, etc.) into applications"
-            },
-            {
-                "skill": "ChatGPT",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Integrate GenAI tools (ChatGPT, Claude, etc.) into applications"
-            },
-            {
-                "skill": "Claude",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Integrate GenAI tools (ChatGPT, Claude, etc.) into applications"
-            },
-            {
-                "skill": "Anomaly detection",
-                "category": "AI/ML",
-                "importance": "high",
-                "evidence": "Apply ML models for anomaly detection"
-            },
-            {
-                "skill": "SQL",
-                "category": "Database",
-                "importance": "high",
-                "evidence": "Query, and analyze data from SQL databases (Snowflake / Postgres)"
-            },
-            {
-                "skill": "Snowflake",
-                "category": "Database",
-                "importance": "high",
-                "evidence": "Query, and analyze data from SQL databases (Snowflake / Postgres)"
-            },
-            {
-                "skill": "Postgres",
-                "category": "Database",
-                "importance": "high",
-                "evidence": "Query, and analyze data from SQL databases (Snowflake / Postgres)"
-            },
-            {
-                "skill": "UAT Testing",
-                "category": "Quality Assurance",
-                "importance": "high",
-                "evidence": "Conduct extensive UAT testing"
-            },
-            {
-                "skill": "Multidev",
-                "category": "Tool",
-                "importance": "high",
-                "evidence": "Manage version control, deployment, and delivery pipelines using Apple's Shuri, Multidev etc"
-            },
-            {
-                "skill": "Python",
-                "category": "Programming Language",
-                "importance": "high",
-                "evidence": "Write and maintain Python scripts"
-            }
-        ],
-        "preferred": [],
-        "resume_keywords": [
-            "Apple Internal Tools",
-            "AI",
-            "LLM Integration",
-            "ChatGPT",
-            "Claude",
-            "Prompt Engineering",
-            "RAG",
-            "ChatBot",
-            "Machine Learning",
-            "Computer Vision",
-            "Python Scripts",
-            "UAT Testing",
-            "Bug Identification",
-            "QA",
-            "Node.js",
-            "Python",
-            "API Integration",
-            "Git",
-            "CI/CD",
-            "Cloud Platforms",
-            "SQL",
-            "NoSQL",
-            "Vector DB",
-            "Feature Delivery",
-            "Cross-Functional Collaboration"
-        ]
-    },
-    "requirements": {
-        "experience": {
-            "minimum_years": null,
-            "maximum_years": null
+    "job_title": "AI Engineer",
+    "total_must_haves": 33,
+    "questions": [
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience with Apple developmental tools such as Shuri, Claude Code, Apple GitHub, Conductor, and DevX, or equivalent internal developer tooling?",
+            "eval_criteria": "Candidate must explicitly list experience with Shuri, Claude Code, Apple GitHub, Conductor, DevX, or explicitly mention equivalent internal developer tools under their skills or experience.",
+            "type": "must_have",
+            "importance": "critical"
         },
-        "education": [],
-        "certifications": [],
-        "languages": [],
-        "other": [
-            "Strong written and verbal communication skills",
-            "Committed to meeting stringent deadlines",
-            "Proactive, driven, and result oriented",
-            "Ability to find solutions collaboratively across the network/teams"
-        ]
-    },
-    "responsibilities": [
-        "Integrate GenAI tools (ChatGPT, Claude, etc.) into applications to deliver AI-powered functionality",
-        "Apply ML models for anomaly detection, analyzing data to surface meaningful anomalies and risks",
-        "Leverage Apple developmental tooling (Shuri, Claude Code, Apple GitHub etc) throughout the development lifecycle",
-        "Query, and analyze data from SQL databases (Snowflake / Postgres)",
-        "Conduct extensive UAT testing to identify, reproduce, and triage bugs before release",
-        "Iteratively improve model outputs through prompt engineering",
-        "Manage version control, deployment, and delivery pipelines using Apple's Shuri, Multidev etc",
-        "Write and maintain Python scripts to validate data for pipelines and analysis",
-        "Work closely with Product, QA, and Design teams to take features from concept to delivery",
-        "Partner with cross-functional stakeholders to align technical implementation with product intent",
-        "Participate in code reviews, debugging, and performance tuning to ensure quality and reliability"
-    ],
-    "requirement_importance": {
-        "skills": {
-            "Shuri": "high",
-            "Claude Code": "high",
-            "Apple GitHub": "high",
-            "Conductor": "high",
-            "DevX": "high",
-            "Analytical skills": "high",
-            "ML models": "high",
-            "Prompt engineering": "high",
-            "Vision Language Models": "high",
-            "Computer Vision": "high",
-            "Git": "high",
-            "CI/CD": "high",
-            "Cloud platforms": "high",
-            "Access Manager": "high",
-            "Sentry": "high",
-            "PagerDuty": "high",
-            "HelpCentral": "high",
-            "Radar": "high",
-            "Box": "high",
-            "Wrike": "high",
-            "Quip": "high",
-            "GenAI tools": "high",
-            "ChatGPT": "high",
-            "Claude": "high",
-            "Anomaly detection": "high",
-            "SQL": "high",
-            "Snowflake": "high",
-            "Postgres": "high",
-            "UAT Testing": "high",
-            "Multidev": "high",
-            "Python": "high"
+        {
+            "category": "experience",
+            "question": "Does the candidate have hands-on experience in using Machine Learning models?",
+            "eval_criteria": "Candidate must demonstrate hands-on experience with ML models in their project descriptions, work experience, or skills section.",
+            "type": "must_have",
+            "importance": "critical"
         },
-        "experience": "low",
-        "education": "low",
-        "certifications": "low",
-        "languages": "low",
-        "other_requirements": "medium"
-    },
-    "salary_range": "$90,000-$140,000 a year"
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate strong analytical skills in their profile or project descriptions?",
+            "eval_criteria": "Candidate's CV should highlight analytical skills through project outcomes, problem-solving roles, or explicit mentions of analytical responsibilities.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have strong prompt engineering skills to improve and optimize model outputs?",
+            "eval_criteria": "Candidate must explicitly mention prompt engineering skills and/or provide examples of projects demonstrating optimization of model outputs via prompt engineering.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience with Vision Language Models (VLMs) for computer vision use cases?",
+            "eval_criteria": "Candidate must explicitly mention experience with VLMs and their application in computer vision use cases.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate demonstrate knowledge of Git for version control?",
+            "eval_criteria": "Candidate must list Git under technical skills or provide evidence of its usage in project descriptions.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate demonstrate knowledge of CI/CD tools?",
+            "eval_criteria": "Candidate must list experience with CI/CD tools (e.g., Jenkins, GitLab CI, GitHub Actions, Azure DevOps, etc.) under technical skills or project descriptions.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate demonstrate knowledge of cloud platforms for deployment and version control?",
+            "eval_criteria": "Candidate must list experience with relevant cloud platforms (e.g., AWS, GCP, Azure, etc.) and their use in deployment or version control activities.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have knowledge of Apple operational tools including Access Manager, Sentry, PagerDuty, and HelpCentral?",
+            "eval_criteria": "Candidate must explicitly mention knowledge or experience with Access Manager, Sentry, PagerDuty, and HelpCentral under their skills or experience.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience working with Apple internal systems such as Radar, Box, Wrike, and Quip?",
+            "eval_criteria": "Candidate must explicitly mention experience with Radar, Box, Wrike, and Quip under their skills or experience.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience integrating GenAI tools (e.g., ChatGPT, Claude) into applications to deliver AI-powered functionality?",
+            "eval_criteria": "Candidate must demonstrate experience in integrating GenAI tools like ChatGPT or Claude into applications within their project or work descriptions.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience applying ML models for anomaly detection?",
+            "eval_criteria": "Candidate must describe experience in applying Machine Learning models specifically for anomaly detection tasks or projects.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience querying and analyzing data from SQL databases?",
+            "eval_criteria": "Candidate must list experience with SQL databases and demonstrate skills in querying and data analysis using SQL.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience with Snowflake database?",
+            "eval_criteria": "Candidate must explicitly mention experience with Snowflake database in their skills or experience section.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience with Postgres database?",
+            "eval_criteria": "Candidate must explicitly mention experience with Postgres database in their skills or experience section.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience conducting User Acceptance Testing (UAT)?",
+            "eval_criteria": "Candidate must demonstrate experience in conducting UAT testing through their responsibilities or project descriptions.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience identifying, reproducing, and triaging bugs?",
+            "eval_criteria": "Candidate must describe experience in bug identification, reproduction, and triage processes in their work history or project details.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience managing version control?",
+            "eval_criteria": "Candidate must demonstrate experience in managing version control systems and processes within their roles or projects.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience managing deployment pipelines?",
+            "eval_criteria": "Candidate must demonstrate experience in managing software deployment pipelines within their roles or projects.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience managing delivery pipelines?",
+            "eval_criteria": "Candidate must demonstrate experience in managing software delivery pipelines within their roles or projects.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience using Apple's Shuri for version control, deployment, and delivery pipelines?",
+            "eval_criteria": "Candidate must explicitly mention experience with Apple's Shuri in the context of version control, deployment, or delivery processes.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience using Apple's Multidev for deployment or delivery pipelines?",
+            "eval_criteria": "Candidate must explicitly mention experience with Apple's Multidev under their skills or experience.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience writing and maintaining Python scripts for data validation, pipelines, and analysis?",
+            "eval_criteria": "Candidate must list Python as a skill and demonstrate experience with writing and maintaining Python scripts for data-related tasks (validation, pipelines, analysis).",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "other",
+            "question": "Does the candidate demonstrate experience working closely with Product, QA, and Design teams to take features from concept to delivery?",
+            "eval_criteria": "Candidate must describe experience in cross-functional collaboration with Product, QA, and Design teams in their work history or project descriptions.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate experience partnering with cross-functional stakeholders to align technical implementation with product intent?",
+            "eval_criteria": "Candidate must describe experience in collaborating with various cross-functional stakeholders to align technical work with product goals or intent.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate have experience participating in code reviews?",
+            "eval_criteria": "Candidate must mention participation in code reviews as part of their responsibilities or team processes.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate demonstrate strong debugging skills?",
+            "eval_criteria": "Candidate must highlight debugging experience or responsibilities within their project work or job descriptions.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Does the candidate demonstrate performance tuning skills?",
+            "eval_criteria": "Candidate must highlight experience or responsibilities involving performance tuning of applications or models.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate strong written communication skills?",
+            "eval_criteria": "The candidate's CV content, clarity, and articulation should reflect strong written communication abilities.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate strong verbal communication skills?",
+            "eval_criteria": "Candidate's CV should suggest roles or experiences where verbal communication was a key requirement (e.g., presentations, team leads, client interaction, stakeholder communication).",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate commitment to meeting stringent deadlines?",
+            "eval_criteria": "Candidate's CV should reflect successful project delivery under time constraints or explicit mention of meeting stringent deadlines in past roles.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate being proactive, driven, and result-oriented?",
+            "eval_criteria": "Candidate's CV should highlight initiatives taken, achievements, and results-driven project outcomes to demonstrate proactivity, drive, and results-orientation.",
+            "type": "must_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "Does the candidate demonstrate an ability to find solutions collaboratively across teams?",
+            "eval_criteria": "Candidate's CV should show instances of successful cross-team collaboration or problem-solving in team-based environments.",
+            "type": "must_have",
+            "importance": "medium"
+        }
+    ]
 }

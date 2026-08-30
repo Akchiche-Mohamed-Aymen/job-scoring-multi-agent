@@ -1,5 +1,5 @@
 from langchain.agents import create_agent
-from schemas import JobProfile
+from schemas import HRJobRequirements
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 import os , json
@@ -11,10 +11,10 @@ model = ChatGoogleGenerativeAI(
     api_key=job_key,   
     max_retries=2,
 )
-job_system_prompt = open("job_system_prompt.txt", "r").read()
+job_system_prompt = open("./job/job_system_prompt.txt", "r").read()
 job_agent = create_agent(model=model,
                         system_prompt=job_system_prompt ,
-                        response_format = JobProfile)
+                        response_format = HRJobRequirements)
 job_title = "AI Engineer"
 job_description = """
 This job is Full-time
@@ -66,7 +66,7 @@ try:
     })
     res = json.dumps(response['structured_response'].model_dump(), indent=4)
     res = json.loads(res)
-    with open("job_profile.json", "w" , encoding='utf-8') as f:
+    with open("./job/job_profile.json", "w" , encoding='utf-8') as f:
         json.dump(res, f, indent=4, ensure_ascii=False) 
 except Exception as e:
     print(f">>> Error")
