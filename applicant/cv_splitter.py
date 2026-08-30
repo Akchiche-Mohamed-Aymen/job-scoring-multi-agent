@@ -28,12 +28,12 @@ def chunk_documents(documents, chunk_size=1000, chunk_overlap=200):
         chunk_overlap=chunk_overlap
     )
     return text_splitter.split_documents(documents)
-def store_chunks(chunks):
+def store_chunks(chunks , collection_name="applicant_chunks", persist_directory="./chroma_db"):
     embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     texts = [chunk.page_content for chunk in chunks]
     vectors = embedder.encode(texts).tolist()
-    db=Chroma(collection_name="applicant_chunks",
-        persist_directory="./chroma_db",
+    db=Chroma(collection_name=collection_name,
+        persist_directory=persist_directory,
         embedding_function=embedder)
     ids = [f'Document{chunks[i].metadata["page"]} chunk_{i}' for i in range(len(chunks))]
     db._collection.add(
@@ -42,14 +42,35 @@ def store_chunks(chunks):
         embeddings=vectors,
         metadatas=[chunk.metadata for chunk in chunks]
     )
-
-documents = load_documents(FILE_PATH)
-print(f"Loaded {len(documents)} documents from {FILE_PATH}")
-chunks = chunk_documents(documents)
-print(f"Created {len(chunks)} chunks from the documents")
-try:
-    store_chunks(chunks)
-    print(f"Stored {len(chunks)} chunks in the Chroma database")
-except Exception as e:
-    print(f"Error storing chunks in the Chroma database: {e}")
+# load → transform/chunk → embed → store    
+def ingest_documents(file_path):
+    documents = load_documents(file_path)
+    print(f"Loaded {len(documents)} documents from {file_path}")
+    chunks = chunk_documents(documents)
+    print(f"Created {len(chunks)} chunks from the documents")
+    try:
+        store_chunks(chunks)
+        print(f"Stored {len(chunks)} chunks in the Chroma database")
+    except Exception as e:
+        print(f"Error storing chunks in the Chroma database: {e}")
+def query_documents(query, collection_name="applicant_chunks", persist_directory="./chroma_db"):
+    embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+    db=Chroma(collection_name=collection_name,
+        persist_directory=persist_directory,
+        embedding_function=embedder)
+    query_vector = embedder.encode([query]).tolist()
+    results = db._collection.query(
+        query_embeddings=query_vector,
+        n_results=3,
+        include=["documents", "metadatas"]
+    )
+    return results
+#the pdf is about the XAI and LLM, so we can use the query_documents function to search for relevant information in the PDF. For example, we can query for "What is XAI?" or "Explain LLM" to retrieve the most relevant chunks from the document.
+query = "What are the approaches used to use the llm for xai?"
+results = query_documents(query)
+print(len(results['documents']))
+for i in range(len(results['documents'])):
+    print(len(results['documents'][i]))
+    #the score of the result can be accessed using the 'score' key in the results dictionary. The score indicates how relevant the chunk is to the query, with higher scores indicating more relevance.
+    print('\n------------------------------------------------------------------------\n')
     
