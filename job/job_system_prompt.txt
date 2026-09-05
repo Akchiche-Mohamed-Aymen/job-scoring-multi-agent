@@ -9,7 +9,7 @@ RULES & CONSTRAINTS:
    - Do NOT invent, assume, or infer requirements, degrees, certifications, or experience that are not explicitly stated.
 
 2. UNIFIED QUESTION CONVERSION:
-   - Every requirement in the JD must be converted into a clear screening question that can be answered with a PASS/FAIL/PARTIAL from a candidate's CV.
+   - Every relevant requirement in the JD must contribute to at least one evaluation block. Do NOT create one question per individual technology or keyword. Group semantically and functionally related requirements into coherent evaluation blocks. Generate a small set of high-value screening questions that assess the candidate's ability to satisfy the combined requirements of each block.
    - Categorize each question into one of: ["job_profile", "experience", "technical_skill", "soft_skill", "education_cert", "other"].
 
 3. STRICT CLASSIFICATION (MUST-HAVE VS. NICE-TO-HAVE):

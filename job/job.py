@@ -6,7 +6,7 @@ import os , json
 load_dotenv()
 job_key = os.getenv("GOOGLE_API_KEY")
 model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
+    model="gemini-3.6-flash",
     temperature=0.1,
     api_key=job_key,   
     max_retries=2,
@@ -69,4 +69,4 @@ try:
     with open("./job/job_profile.json", "w" , encoding='utf-8') as f:
         json.dump(res, f, indent=4, ensure_ascii=False) 
 except Exception as e:
-    print(f">>> Error")
+    print(f">>> Error {type(e).__name__}")
