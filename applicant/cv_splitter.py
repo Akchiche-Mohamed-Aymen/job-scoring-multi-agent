@@ -1,11 +1,21 @@
 from pathlib import Path
+from langchain_mistralai import MistralAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pypdf import PdfReader
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
-from sentence_transformers import SentenceTransformer
-
+from dotenv import load_dotenv
+from langchain_mistralai import MistralAIEmbeddings
+from langchain.tools import tool
+import os
+load_dotenv()
+api_key = os.getenv("MISTRAL_API_KEY")
 FILE_PATH = "./applicant/xai&LLM.pdf"
+
+embeddings = MistralAIEmbeddings(
+    model="mistral-embed",
+    api_key= api_key
+)
 def load_documents(file_path):
     reader = PdfReader(file_path)
     documents = []
@@ -29,19 +39,15 @@ def chunk_documents(documents, chunk_size=1000, chunk_overlap=200):
     )
     return text_splitter.split_documents(documents)
 def store_chunks(chunks , collection_name="applicant_chunks", persist_directory="./chroma_db"):
-    embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-    texts = [chunk.page_content for chunk in chunks]
-    vectors = embedder.encode(texts).tolist()
-    db=Chroma(collection_name=collection_name,
-        persist_directory=persist_directory,
-        embedding_function=embedder)
     ids = [f'Document{chunks[i].metadata["page"]} chunk_{i}' for i in range(len(chunks))]
-    db._collection.add(
-        ids=ids,
-        documents=texts,
-        embeddings=vectors,
-        metadatas=[chunk.metadata for chunk in chunks]
+    db = Chroma(
+        collection_name=collection_name,
+        embedding_function=embeddings,
+        persist_directory=persist_directory,
+        
     )
+    db.add_documents(chunks, ids=ids)
+    
 # load → transform/chunk → embed → store    
 def ingest_documents(file_path):
     documents = load_documents(file_path)
@@ -52,25 +58,17 @@ def ingest_documents(file_path):
         store_chunks(chunks)
         print(f"Stored {len(chunks)} chunks in the Chroma database")
     except Exception as e:
-        print(f"Error storing chunks in the Chroma database: {e}")
+        print(f"Error storing chunks in the Chroma database: {type(e).__name__}")
+@tool
 def query_documents(query, collection_name="applicant_chunks", persist_directory="./chroma_db"):
-    embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-    db=Chroma(collection_name=collection_name,
+    """retrieve relevant documents from the Chroma database based on a query and return the documents and confidence score"""
+    db = Chroma(
+        collection_name=collection_name,
+        embedding_function=embeddings,
         persist_directory=persist_directory,
-        embedding_function=embedder)
-    query_vector = embedder.encode([query]).tolist()
-    results = db._collection.query(
-        query_embeddings=query_vector,
-        n_results=3,
-        include=["documents", "metadatas"]
     )
-    return results
-#the pdf is about the XAI and LLM, so we can use the query_documents function to search for relevant information in the PDF. For example, we can query for "What is XAI?" or "Explain LLM" to retrieve the most relevant chunks from the document.
-query = "What are the approaches used to use the llm for xai?"
-results = query_documents(query)
-print(len(results['documents']))
-for i in range(len(results['documents'])):
-    print(len(results['documents'][i]))
-    #the score of the result can be accessed using the 'score' key in the results dictionary. The score indicates how relevant the chunk is to the query, with higher scores indicating more relevance.
-    print('\n------------------------------------------------------------------------\n')
-    
+    k = 3
+    results = db.similarity_search_with_score(query, k=k)
+    evidence_documents = [doc.page_content for doc, _ in results]
+    confidence = round(sum([score for _, score in results]) / k, 2)
+    return evidence_documents, confidence
