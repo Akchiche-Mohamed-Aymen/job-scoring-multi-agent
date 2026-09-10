@@ -10,8 +10,8 @@ from langchain.tools import tool
 import os
 load_dotenv()
 api_key = os.getenv("MISTRAL_API_KEY")
-FILE_PATH = "./applicant/xai&LLM.pdf"
-
+FILE_PATH = "./applicant/Mohamed_Aymen_Akchiche.pdf"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 embeddings = MistralAIEmbeddings(
     model="mistral-embed",
     api_key= api_key
@@ -71,4 +71,7 @@ def query_documents(query, collection_name="applicant_chunks", persist_directory
     results = db.similarity_search_with_score(query, k=k)
     evidence_documents = [doc.page_content for doc, _ in results]
     confidence = round(sum([score for _, score in results]) / k, 2)
+    print('retireved successfully from the Chroma database')
     return evidence_documents, confidence
+if __name__ == "__main__":
+    ingest_documents(FILE_PATH)
