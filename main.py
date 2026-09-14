@@ -68,7 +68,9 @@ except Exception as e:
         "answers": []
     }
 
-def evaluate_cv(res):
+def evaluate_cv():
+        res = json.load(open("./job/job_profile.json", "r" , encoding='utf-8'))
+        res = res['questions']
         i = evaluation['index']
         n  = len(res)
         while i < n:
@@ -95,16 +97,15 @@ def evaluate_cv(res):
                     time.sleep(s)
                     i += 1
                     if i > n - 1:
-                        print(f"\033[92m>>> All questions evaluated successfully. Process completed.\033[0m")
+                        return "All questions evaluated successfully. Process completed."
                 except Exception as e:
                     print(f"\033[91m>>> Error From CV Agent ===> {e}\033[0m")
                     fail += 1
                     if fail > 3:
-                        print(f"\033[91m>>> Failed to evaluate Question {i+1} after 3 attempts. Process terminated.\033[0m")
                         evaluation['index'] = i 
                         with open("./applicant/cv_evaluation.json", "w" , encoding='utf-8') as f:
                             json.dump(evaluation, f, indent=4, ensure_ascii=False)
-                        i += 1
+                        raise Exception(f"Failed to evaluate Question {i+1} after 3 attempts. Process terminated. {str(e)}")
+                        
 #res = structured_job_profile(job_title, job_description)
-res = json.load(open("./job/job_profile.json", "r" , encoding='utf-8'))
-evaluate_cv(res['questions'])
+

@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import IngestRequest, JobProfileRequest
 from applicant.cv_splitter import ingest_documents
-from main import structured_job_profile
+from main import structured_job_profile , evaluate_cv
 
 app = FastAPI(title="Job Scoring API")
 
@@ -32,6 +32,20 @@ def ingest_cv(request: IngestRequest):
         )
 
 
+@app.post("/v0/api_key")
+def create_job_profile(api_key: str):
+    try:
+        with open("key.txt" , "w") as f:
+            f.write(api_key.strip())
+        return {
+            "success": True,
+            "message": "Api Key was saved successfully"
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
 @app.post("/v0/job-profile")
 def create_job_profile(request: JobProfileRequest):
     try:
@@ -49,4 +63,18 @@ def create_job_profile(request: JobProfileRequest):
             status_code=500,
             detail=str(e)
         )
+@app.get("/v0/cv_evaluate")
+def match_cv():
+    try:
+        return {
+                    "success": True,
+                    "message": evaluate_cv()
+                }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+        
+        
 #py -m uvicorn server:app --reload
