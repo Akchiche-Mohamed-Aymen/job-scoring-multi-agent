@@ -1,1 +1,4 @@
 .env
+/applicant/chroma_db
+/job/job_profile.json
+/applicant/cv_evaluation.json

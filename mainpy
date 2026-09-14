@@ -1,3 +1,0 @@
-from employee import employee_agent
-from job import job_agent
-hr_agent  = None
