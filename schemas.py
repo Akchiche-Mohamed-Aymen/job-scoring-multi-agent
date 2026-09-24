@@ -6,7 +6,5 @@ class CVAnswer(BaseModel):
     evidence_status: Literal["high","medium","low","unknown"]
     evidence_documents: list[str]
     confidence: float
+    justification : float
 
-
-class CVAgentResponse(BaseModel):
-    answers: list[CVAnswer]

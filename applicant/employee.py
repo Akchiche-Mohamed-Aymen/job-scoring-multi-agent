@@ -1,10 +1,9 @@
 from langchain.agents import create_agent
 from dotenv import load_dotenv
 import os
-from schemas import CVAgentResponse
+from schemas import CVAnswer
 from .cv_splitter import query_documents
 from langchain_mistralai import ChatMistralAI
-from json import dumps
 
 load_dotenv()
 api_key = os.getenv("MISTRAL_API_KEY")
@@ -17,14 +16,5 @@ cv_evaluator_agent = create_agent(
     model=llm_model,
     system_prompt=system_prompt,
     tools=[query_documents],
-    response_format=CVAgentResponse
+    response_format=CVAnswer
 )
-'''
-prompt = f"""
-Category: {question['category']}
-Question: {question['question']}
-Evaluation Criteria: {question['eval_criteria']}
-Required Type: {question['type']}
-Importance: {question['importance']}
-"""
-'''
