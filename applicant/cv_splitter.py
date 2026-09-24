@@ -68,7 +68,7 @@ def query_documents(query, collection_name="applicant_chunks", persist_directory
     k = 3
     results = db.similarity_search_with_score(query, k=k)
     evidence_documents = [doc.page_content for doc, _ in results]
-    confidence = round(sum([score for _, score in results]) / k, 2)
-    print("Finish successfully retrieving relevant documents from the Chroma database")
-    return {"evidence_documents": evidence_documents, "confidence": confidence}
-
+    print('retireved successfully from the Chroma database')
+    return evidence_documents
+if __name__ == "__main__":
+    ingest_documents(FILE_PATH)
