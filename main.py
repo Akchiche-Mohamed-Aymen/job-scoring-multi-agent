@@ -86,7 +86,7 @@ def evaluate_cv():
                         "messages": [{"role": "user", "content": formatter}]
                     })
                     out = json.dumps(cv_response['structured_response'].model_dump(), indent=4)
-                    out = json.loads(out)['answers'][0]
+                    out = json.loads(out)['answers']
                     evaluation['answers'].append(out)
                     evaluation['index'] = i + 1
                     print(f"\033[92m>>> Question {i+1} evaluated successfully.\033[0m")
