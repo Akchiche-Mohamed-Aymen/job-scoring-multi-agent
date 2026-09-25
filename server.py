@@ -14,15 +14,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+#"C:/Users/SG INFO/Desktop/job-scoring-multi-agent/applicant/Mohamed_Aymen_Akchiche.pdf"
 @app.post("/v0/ingest")
 def ingest_cv(request: IngestRequest):
     try:
-        result = ingest_documents(f'{request.file_path}')
+        msg = ingest_documents(request.file_path)
 
         return {
             "success": True,
-            "message": result
+            "message": msg
         }
 
     except Exception as e:
@@ -33,7 +33,7 @@ def ingest_cv(request: IngestRequest):
 
 
 @app.post("/v0/api_key")
-def create_job_profile(api_key: str):
+def save_api_key(api_key: str):
     try:
         with open("key.txt" , "w") as f:
             f.write(api_key.strip())
@@ -49,13 +49,13 @@ def create_job_profile(api_key: str):
 @app.post("/v0/job-profile")
 def create_job_profile(request: JobProfileRequest):
     try:
-        result = structured_job_profile(
+        msg = structured_job_profile(
             request.job_title,
             request.job_description
         )
         return {
             "success": True,
-            "message": result
+            "message": msg
         }
 
     except Exception as e:
