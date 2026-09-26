@@ -31,14 +31,18 @@ function ApiKey() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/api-key",
+        "http://localhost:8000/v0/api_key",
         {
           mistral: mistralKey,
           hf: hfKey,
         }
       );
 
-      setMessage(response.data?.message || "API keys saved successfully.");
+      console.log(response);
+
+      setMessage(
+        response.data?.message || "API keys saved successfully."
+      );
     } catch (err) {
       setError(
         err.response?.data?.detail ||
@@ -52,8 +56,6 @@ function ApiKey() {
   return (
     <div className="mx-auto max-w-3xl">
       <div className="mb-8">
-        <p className="text-sm font-semibold text-blue-600">STEP 02</p>
-
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           Add API Keys
         </h1>
@@ -140,12 +142,19 @@ function ApiKey() {
             </div>
           )}
 
+          {/* Loading message */}
+          {loading && (
+            <p className="mt-5 text-center text-sm text-slate-500">
+              Saving API keys...
+            </p>
+          )}
+
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-6 w-full cursor-pointer rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Saving API Keys..." : "Save API Keys"}
+            Save API Keys
           </button>
         </form>
       </div>

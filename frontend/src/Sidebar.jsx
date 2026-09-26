@@ -6,13 +6,14 @@ const navigation = [
     path: "/home",
   },
   {
-    name: "Ingest CV",
-    path: "/ingest-cv",
-  },
-  {
     name: "API Key",
     path: "/api-key",
   },
+  {
+    name: "Ingest CV",
+    path: "/ingest-cv",
+  },
+  
   {
     name: "Structure Job",
     path: "/structure-job",

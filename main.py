@@ -15,19 +15,24 @@ def structured_job_profile(job_title, job_description):
         return "Job profile structured successfully and saved "
     except Exception as e:
         raise Exception(str(e))
-try:
-    evaluation  = json.load(open("./applicant/cv_evaluation.json", "r" , encoding='utf-8'))
-except Exception as e:
-    evaluation = {
-        "index" : 0,
-        "answers": []
-    }
+
 
 def evaluate_cv():
+        try:
+            evaluation  = json.load(open("./applicant/cv_evaluation.json", "r" , encoding='utf-8'))
+        except:
+            evaluation = {
+            "index" : 0,
+            "answers": [],
+            "score" : 0
+                }
         res = json.load(open("./job/job_profile.json", "r" , encoding='utf-8'))
         res = res['questions']
         i = evaluation['index']
+        score = evaluation['score']
         n  = len(res)
+        if i >= n :
+            return evaluation
         while i < n:
                 fail = 0
                 formatter = ''
@@ -42,18 +47,26 @@ def evaluate_cv():
                     })
                     out = json.dumps(cv_response['structured_response'].model_dump(), indent=4)
                     out = json.loads(out)
-                    print(out)
                     evaluation['answers'].append(out)
+                    evaluation['answers'][i]['question'] = res[i]['question']
+                    evaluation['answers'][i]['category'] = res[i]['category']
+                    evaluation['answers'][i]['type'] = res[i]['type']
+                    score += out['confidence'] / n
+                    evaluation['score'] = score
                     evaluation['index'] = i + 1
                     print(f"\033[92m>>> Question {i+1} evaluated successfully.\033[0m")
                     with open("./applicant/cv_evaluation.json", "w" , encoding='utf-8') as f:
                         json.dump(evaluation, f, indent=4, ensure_ascii=False)
-                    s = 10
+                    s = 3
                     print(f"\033[1;34mLLM goes to sleep for {s} seconds...\033[0m")
                     time.sleep(s)
                     i += 1
-                    if i > n - 1:
-                        return "All questions evaluated successfully. Process completed."
+                    return {
+                        "msg":"All questions evaluated successfully. Process completed.",
+                        "answers": evaluation["answers"],
+                        "score": score
+                        }
+                        
                 except Exception as e:
                     print(f"\033[91m>>> Error From CV Agent ===> {e}\033[0m")
                     fail += 1
@@ -63,4 +76,5 @@ def evaluate_cv():
                             json.dump(evaluation, f, indent=4, ensure_ascii=False)
                         raise Exception(f"Failed to evaluate Question {i+1} after 3 attempts. Process terminated. {str(e)}")
                         
-evaluate_cv()
+
+    

@@ -25,8 +25,7 @@ class CVAnswer(BaseModel):
     confidence: float
 
 
-class CVAgentResponse(BaseModel):
-    answers: list[CVAnswer]
+
 class IngestRequest(BaseModel):
     file_path: str
 class Key(BaseModel):

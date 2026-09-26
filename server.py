@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import IngestRequest, JobProfileRequest , Key
 from applicant.cv_splitter import ingest_documents
-from main import structured_job_profile , evaluate_cv
+from main import structured_job_profile , evaluate_cv 
 import json
 app = FastAPI(title="Job Scoring API")
 
@@ -32,11 +32,12 @@ def ingest_cv(request: IngestRequest):
         )
 
 
+
 @app.post("/v0/api_key")
 def save_api_key(req: Key):
     try:
         with open("keys.json", "w" , encoding='utf-8') as f:
-                json.dump(req, f, indent=4, ensure_ascii=False)
+                json.dump(req.model_dump(), f, indent=4, ensure_ascii=False)
         return {
             "success": True,
             "message": "Api Key was saved successfully"
@@ -55,7 +56,7 @@ def create_job_profile(request: JobProfileRequest):
         )
         return {
             "success": True,
-            "message": msg
+            "msg": msg
         }
 
     except Exception as e:
@@ -66,10 +67,8 @@ def create_job_profile(request: JobProfileRequest):
 @app.get("/v0/cv_evaluate")
 def match_cv():
     try:
-        return {
-                    "success": True,
-                    "message": evaluate_cv()
-                }
+        res = evaluate_cv()
+        return res
     except Exception as e:
         raise HTTPException(
             status_code=500,

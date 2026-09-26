@@ -5,14 +5,14 @@ function StructureJob() {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState(null);
+  const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setError("");
-    setResult(null);
+    setMessage("");
 
     if (!jobTitle.trim()) {
       setError("Please enter a job title.");
@@ -28,14 +28,16 @@ function StructureJob() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/structured-job-profile",
+        "http://localhost:8000/v0/job-profile",
         {
           job_title: jobTitle,
           job_description: jobDescription,
         }
       );
 
-      setResult(response.data);
+      setMessage(
+        response.data?.msg || "Job profile structured successfully."
+      );
     } catch (err) {
       setError(
         err.response?.data?.detail ||
@@ -114,29 +116,30 @@ function StructureJob() {
             </div>
           )}
 
+          {/* Success */}
+          {message && (
+            <div className="mt-5 rounded-xl border border-green-100 bg-green-50 px-4 py-3 text-sm text-green-600">
+              {message}
+            </div>
+          )}
+
+          {/* Loading */}
+          {loading && (
+            <p className="mt-5 text-center text-sm text-slate-500">
+              Structuring job...
+            </p>
+          )}
+
           {/* Submit */}
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-6 w-full cursor-pointer rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Structuring Job..." : "Structure Job"}
+            Structure Job
           </button>
         </form>
       </div>
-
-      {/* Result */}
-      {result && (
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-lg font-semibold text-slate-900">
-            Structured Job Profile
-          </h2>
-
-          <pre className="mt-4 overflow-x-auto rounded-xl bg-slate-900 p-5 text-sm leading-6 text-slate-100">
-            {JSON.stringify(result, null, 2)}
-          </pre>
-        </div>
-      )}
     </div>
   );
 }

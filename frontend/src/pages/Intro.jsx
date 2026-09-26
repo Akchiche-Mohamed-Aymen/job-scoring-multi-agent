@@ -12,7 +12,7 @@ function Intro() {
       number: "02",
       title: "Add API Key",
       description:
-        "Provide the API key required to power the AI components of the application.",
+        "Provide the API keys required to power the AI components of the application.",
     },
     {
       number: "03",
