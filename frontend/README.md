@@ -51,9 +51,8 @@ POST /v0/match_cv
 ## Application Flow
 
 The intended workflow is:
-
-Ingest CV
-→ Add API Keys
+Add API Keys
+→ Ingest CV
 → Structure Job
 → Match CV
 
