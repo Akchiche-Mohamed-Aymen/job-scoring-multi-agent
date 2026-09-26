@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import IngestRequest, JobProfileRequest
+from schemas import IngestRequest, JobProfileRequest , Key
 from applicant.cv_splitter import ingest_documents
 from main import structured_job_profile , evaluate_cv
-
+import json
 app = FastAPI(title="Job Scoring API")
 
 app.add_middleware(
@@ -33,10 +33,10 @@ def ingest_cv(request: IngestRequest):
 
 
 @app.post("/v0/api_key")
-def save_api_key(api_key: str):
+def save_api_key(req: Key):
     try:
-        with open("key.txt" , "w") as f:
-            f.write(api_key.strip())
+        with open("keys.json", "w" , encoding='utf-8') as f:
+                json.dump(req, f, indent=4, ensure_ascii=False)
         return {
             "success": True,
             "message": "Api Key was saved successfully"

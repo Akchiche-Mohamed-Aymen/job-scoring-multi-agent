@@ -2,6 +2,10 @@ import { NavLink } from "react-router-dom";
 
 const navigation = [
   {
+    name: "Home",
+    path: "/home",
+  },
+  {
     name: "Ingest CV",
     path: "/ingest-cv",
   },

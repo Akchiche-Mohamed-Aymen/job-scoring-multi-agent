@@ -29,6 +29,9 @@ class CVAgentResponse(BaseModel):
     answers: list[CVAnswer]
 class IngestRequest(BaseModel):
     file_path: str
+class Key(BaseModel):
+    mistral: str
+    hf: str
 
 
 class JobProfileRequest(BaseModel):

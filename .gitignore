@@ -2,7 +2,7 @@
 /applicant/chroma_db
 /job/job_profile.json
 /applicant/cv_evaluation.json
-key.txt
+keys.json
 # Logs
 /frontend/logs
 /frontend/*.log
