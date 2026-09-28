@@ -1,11 +1,9 @@
-from pathlib import Path
-from langchain_mistralai import MistralAIEmbeddings
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pypdf import PdfReader
 from langchain_core.documents import Document
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_mistralai import MistralAIEmbeddings
 from langchain_chroma import Chroma
 from dotenv import load_dotenv
-from langchain_mistralai import MistralAIEmbeddings
 from langchain.tools import tool
 import os
 load_dotenv()
@@ -20,24 +18,28 @@ def load_documents(file_path):
     reader = PdfReader(file_path)
     documents = []
     for page_number, page in enumerate(reader.pages):
-        text = page.extract_text() or ""
-        if text != "":
+        text = page.extract_text()
+
+        if text and text.strip():
             documents.append(
                 Document(
                     page_content=text,
                     metadata={
-                        "source": str(Path(file_path)),
-                        "page": page_number,
-                    },
+                        "source": file_path,
+                        "page": page_number + 1
+                    }
                 )
             )
+
     return documents
 def chunk_documents(documents, chunk_size=1000, chunk_overlap=200):
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap
+    semantic_splitter = SemanticChunker(
+        embeddings=embeddings,
+        breakpoint_threshold_type="percentile",
+        breakpoint_threshold_amount=95
     )
-    return text_splitter.split_documents(documents)
+
+    return semantic_splitter.split_documents(documents)
 def store_chunks(chunks , collection_name="applicant_chunks", persist_directory="./chroma_db"):
     ids = [f'Document{chunks[i].metadata["page"]} chunk_{i}' for i in range(len(chunks))]
     db = Chroma(
