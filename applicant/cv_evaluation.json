@@ -1,0 +1,158 @@
+{
+    "index": 14,
+    "answers": [
+        {
+            "answer": "The candidate does not hold a Bachelor's degree in Computer Science, Artificial Intelligence, Data Science, or a related field. Instead, the candidate is currently pursuing a **State Engineer Degree in Artificial Intelligence (5-Year Graduate Program)** at Kasdi Merbah University of Ouargla.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "reliable, context-aware AI applications that connect language models with structured and unstructured data.\nEDUCATION\nState Engineer Degree in Artificial Intelligence (5-Year Graduate Program)\nKasdi Merbah University of Ouargla — Currently in 4th Year"
+            ],
+            "confidence": 1.0,
+            "question": "Do you hold a Bachelor's degree in Computer Science, Artificial Intelligence, Data Science, or a related field? If yes, please specify the degree and university.",
+            "category": "education_cert",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate demonstrates strong proficiency in Python programming through explicit mention of Python as a core skill and multiple projects involving Python for data processing, machine learning, and automation. \n\nKey examples include:\n1. **AI-Powered E-Learning Agent**: A multi-agent system developed using Python, LangChain, and other AI tools for an English e-learning platform. This project involved LLM reasoning, RAG pipelines, and vector embeddings, showcasing advanced Python scripting and automation.\n\n2. **Poem Genre Classification**: A multi-class NLP system built with Python, Scikit-learn, Pandas, and NLTK. The candidate performed data preprocessing, fine-tuned sentence embeddings, and deployed an interactive Streamlit web app, demonstrating Python’s role in data processing and machine learning.\n\n3. **Spam Classification**: A binary NLP application developed in Python using Scikit-learn, NLTK, and Pandas. This project involved text preprocessing, model training, and deployment via Streamlit, highlighting Python’s use in automation and machine learning.\n\nThe candidate also lists Python as a core skill in their technical skills section and applies it extensively in machine learning, NLP, and AI projects.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Engineering & Version Control: Git, Data Preprocessing, Feature Engineering, Feature Selection, Missing Value Handling, Outlier Handling, Model Evaluation, Hyperparameter Tuning, Cross-Validation\nSELECTED AI & MACHINE LEARNING PROJECTS\nAI-Powered E-Learning Agent\nTech: Python, LangChain, LangGraph, Google Gemini, ChromaDB, RAG, Vector Embeddings, Tool Calling, Agent Memory\nGitHub: github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent\nDesigned a multi-agent assistant for an English e-learning platform...\nPoem Genre Classification\nTech: Python, Scikit-learn, Pandas, NLTK, Streamlit, Sentence Embeddings, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/poem_classification...\nSpam Classification\nTech: Python, Scikit-learn, NLTK, Pandas, Streamlit, TF-IDF, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/spam_detection_classifier...\nTECHNICAL SKILLS\nProgramming & Data: Python, SQL, NumPy, Pandas\nMachine Learning & AI: Machine Learning, Deep Learning, Scikit-learn\nNLP: Natural Language Processing, NLTK, TF-IDF, Text Preprocessing, Sentence Embeddings"
+            ],
+            "confidence": 0.98,
+            "question": "Can you demonstrate strong proficiency in Python programming? Please provide examples of projects or tasks where you applied Python for data processing, machine learning, or automation.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate has explicit experience with supervised machine learning techniques, demonstrated through multiple projects. \n\n1. **Supervised Learning (Classification/Regression):**\n   - **Customer Churn Prediction & Segmentation**: The candidate developed an end-to-end application for predicting customer churn and segmenting customers using **Scikit-learn**, a supervised machine learning library. This project involved **data preprocessing, feature engineering, model evaluation, and hyperparameter tuning**, all critical steps in supervised learning workflows.\n   - **Poem Genre Classification**: The candidate built a **multi-class classification system** using **Scikit-learn** to classify poems into distinct genres (Affection, Death, Environment, Music). The project explicitly mentions **model evaluation metrics** such as Accuracy, Precision, Recall, and F1-Score, which are standard for supervised classification tasks.\n   - **Spam Classification**: This project involved building a **binary classification model** using **Scikit-learn** to distinguish between spam and non-spam (Ham) messages. The candidate also used **TF-IDF**, a feature extraction technique commonly applied in supervised text classification.\n\n2. **Unsupervised Learning (Clustering):**\n   - While the retrieved evidence does **not** explicitly mention unsupervised learning techniques like clustering in the projects described, the **Customer Churn Prediction & Segmentation** project includes **customer segmentation**, which is a common application of unsupervised learning (e.g., clustering algorithms like K-Means). However, the candidate does not explicitly state the use of unsupervised techniques such as clustering algorithms or algorithms like PCA for dimensionality reduction.\n\n**Evidence Summary:**\nThe candidate explicitly demonstrates experience with **supervised learning techniques** (classification and regression) through well-documented projects. However, there is **no explicit mention of unsupervised learning techniques** (e.g., clustering) in the retrieved evidence.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Poem Genre Classification\nTech: Python, Scikit-learn, Pandas, NLTK, Streamlit, Sentence Embeddings, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/poem_classification  |  Demo: poemclassification.streamlit.app/\nDeveloped a multi-class NLP system that classifies poems into Affection, Death, Environment, and Music.\nPrepared and cleaned textual data, then fine-tuned a pre-trained sentence embedding model using similarity-based\nlearning to produce domain-specific semantic representations.\nUsed the resulting embeddings for downstream classification and evaluated the system using Accuracy, Precision,\nRecall, and F1-Score.\nDeployed the application as an interactive Streamlit web app.\nSpam Classification\nTech: Python, Scikit-learn, NLTK, Pandas, Streamlit, TF-IDF, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/spam_detection_classifier  |  Demo: spamdetectionclassifier.streamlit.app/\nBuilt a binary NLP application to classify email and text messages as Spam or Not Spam (Ham).",
+                "Customer Churn Prediction & Segmentation\nTech: Python, Scikit-learn, Pandas, LangChain, Streamlit, Generative AI\nGitHub: github.com/Akchiche-Mohamed-Aymen/Customer-Churn-Prediction-Segmentation-Using-Machine-Learning  |  Demo:\ncustomer-churn-prediction-segmentation-using-machine-learning.streamlit.app/\nDeveloped an end-to-end banking analytics application for customer churn prediction, customer segmentation, and\nAI-generated retention recommendations.\nPerformed  data  preprocessing,  exploratory  analysis,  feature  engineering,  and  model  evaluation  to  prepare\ncustomer data for predictive analytics."
+            ],
+            "confidence": 0.95,
+            "question": "How familiar are you with supervised and unsupervised machine learning techniques? Please describe any projects or experiments involving these methods.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate has explicitly listed **scikit-learn**, **Pandas**, and **NumPy** as tools used in multiple projects. \n\n- **Scikit-learn**: Used in the **Poem Genre Classification** and **Spam Classification** projects for machine learning tasks such as text classification, model evaluation (Accuracy, Precision, Recall, F1-Score), and hyperparameter tuning. Additionally, scikit-learn was referenced in the context of **Customer Churn Prediction & Segmentation** for predictive modeling and feature engineering.\n\n- **Pandas**: Used in the **Poem Genre Classification**, **Spam Classification**, and **House Price Estimator** projects for data preprocessing, feature engineering, and exploratory analysis. The candidate explicitly mentions Pandas as part of the technical stack for these projects.\n\n- **NumPy**: Used in the **House Price Estimator** project for data preprocessing, feature selection, optimization, and building the predictive modeling workflow from scratch.\n\nThe candidate demonstrates hands-on experience with these tools in real-world projects, including data cleaning, feature engineering, model evaluation, and deployment.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Poem Genre Classification\nTech: Python, Scikit-learn, Pandas, NLTK, Streamlit, Sentence Embeddings, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/poem_classification  |  Demo: poemclassification.streamlit.app/\nDeveloped a multi-class NLP system that classifies poems into Affection, Death, Environment, and Music.\nPrepared and cleaned textual data, then fine-tuned a pre-trained sentence embedding model using similarity-based\nlearning to produce domain-specific semantic representations.\nUsed the resulting embeddings for downstream classification and evaluated the system using Accuracy, Precision,\nRecall, and F1-Score.\nDeployed the application as an interactive Streamlit web app.\nSpam Classification\nTech: Python, Scikit-learn, NLTK, Pandas, Streamlit, TF-IDF, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/spam_detection_classifier  |  Demo: spamdetectionclassifier.streamlit.app/\nBuilt a binary NLP application to classify email and text messages as Spam or Not Spam (Ham).",
+                "House Price Estimator\nTech: Python, NumPy, Pandas, Streamlit\nGitHub: github.com/Akchiche-Mohamed-Aymen/house-prediction-multiple-regression  |  Demo: house-prediction-multiple-regression-mphxy4in5viwbbujeff7oy.streamlit.app/\nImplemented a house price prediction system from scratch using Python and NumPy to strengthen understanding\nof predictive modeling and optimization.\nBuilt the data preprocessing, feature selection, optimization, and evaluation workflow without relying on high-level\nmachine learning frameworks.\nDeployed the estimator as an interactive Streamlit application."
+            ],
+            "confidence": 0.98,
+            "question": "What is your experience with **scikit-learn**, Pandas, and NumPy? Please provide details on how you have used these tools in your work.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate explicitly mentions model evaluation, cross-validation, and performance metrics in their CV and projects. Specifically, they reference: \n- **Model Evaluation**: Mentioned under 'Engineering & Version Control' as part of their technical skills. \n- **Cross-Validation**: Explicitly listed as a skill. \n- **Performance Metrics**: Used in multiple projects, including Accuracy, Precision, Recall, and F1-Score for the 'Poem Genre Classification' project, and R² Score, MAE, and RMSE for the 'ROP Prediction System' project. The candidate also evaluated the 'Spam Classification' system but does not explicitly mention metrics for this project in the retrieved documents.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Engineering & Version Control: Git, Data Preprocessing, Feature Engineering, Feature Selection, Missing Value Handling, Outlier Handling, **Model Evaluation**, Hyperparameter Tuning, **Cross-Validation** SELECTED AI & MACHINE LEARNING PROJECTS Poem Genre Classification Tech: Python, Scikit-learn, Pandas, NLTK, Streamlit, Sentence Embeddings, NLP GitHub: github.com/Akchiche-Mohamed-Aymen/poem_classification | Demo: poemclassification.streamlit.app/ Developed a multi-class NLP system that classifies poems into Affection, Death, Environment, and Music. ... Used the resulting embeddings for downstream classification and evaluated the system using **Accuracy, Precision, Recall, and F1-Score**.",
+                "ROP Prediction System Tech: Python, Scikit-learn, Pandas, NumPy, Streamlit GitHub: github.com/Akchiche-Mohamed-Aymen/rop_prediction | Demo: rop-prediction90.streamlit.app/ Developed a freelance predictive analytics solution ... Evaluated predictive performance using **R² Score, MAE, and RMSE**"
+            ],
+            "confidence": 0.98,
+            "question": "How do you approach model evaluation, cross-validation, and performance metrics? Share examples of how you have applied these concepts in your work.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate explicitly lists SQL as a technical skill in their profile under 'Programming & Data' skills. However, there is no explicit mention of projects, specific queries, database interactions, or detailed examples of SQL usage for data analysis or processing.",
+            "evidence_status": "unknown",
+            "evidence_documents": [],
+            "confidence": 0.0,
+            "question": "Describe your experience working with SQL and structured datasets. Provide examples of how you have queried, analyzed, or processed data using SQL.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate explicitly mentions the use of **Jupyter notebooks** and **GitHub repositories** as part of their documentation practices for AI and machine learning projects. For example, their projects include GitHub links where code, configurations, and experiments are shared publicly. However, there is no explicit mention of **README files** or **technical reports** as part of their documentation practices.",
+            "evidence_status": "medium",
+            "evidence_documents": [
+                "Engineering & Version Control: Git, Data Preprocessing, Feature Engineering, Feature Selection, Missing Value Handling, Outlier Handling, Model Evaluation, Hyperparameter Tuning, Cross-Validation SELECTED AI & MACHINE LEARNING PROJECTS AI-Powered E-Learning Agent Tech: Python, LangChain, LangGraph, Google Gemini, ChromaDB, RAG, Vector Embeddings, Tool Calling, Agent Memory GitHub: github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent Designed a multi-agent assistant for an English e-learning platform that combines LLM reasoning, structured learning data, specialized tools, RAG, and conversational memory. Built a Main Agent to understand user requests, select appropriate tools, combine results, and generate context-aware responses across student, course, exam, instructor, and educational-content use cases. Implemented a Retrieval-Augmented Generation pipeline using vector embeddings and ChromaDB to retrieve relevant educational documents and provide grounded answers.",
+                "Built a binary NLP application to classify email and text messages as Spam or Not Spam (Ham). Implemented text cleaning, unnecessary-character removal, stemming, TF-IDF vectorization, and class-balancing techniques. Evaluated classification performance using Accuracy, Precision, and Recall, with emphasis on detecting unwanted messages while reducing false classifications. Deployed the application using Streamlit. Email Generator Tech: LangChain, Google Gemini, Generative AI GitHub: github.com/Akchiche-Mohamed-Aymen/Email-generator | Demo: generate-email-with-ai.streamlit.app/ Developed a Generative AI application that transforms user requirements into personalized professional emails. Designed prompts around sender information, purpose, audience, writing style, tone, emotion, and key points to generate a relevant subject line and complete email body. Used LangChain to orchestrate the application workflow and the Gemini API as the underlying language model."
+            ],
+            "confidence": 0.8,
+            "question": "How do you document experiments, results, and model configurations? Please share examples of documentation practices you follow.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate does not explicitly mention experience with TensorFlow or PyTorch in their CV. No projects or tasks involving these frameworks are described.",
+            "evidence_status": "unknown",
+            "evidence_documents": [],
+            "confidence": 0.95,
+            "question": "Do you have experience with TensorFlow or PyTorch? If yes, describe projects or tasks where you applied these frameworks.",
+            "category": "technical_skill",
+            "type": "nice_to_have"
+        },
+        {
+            "answer": "The candidate does not explicitly mention FastAPI, Flask, or Django in their CV or projects. While they have deployed ML model-related applications using Streamlit, this does not satisfy the requirement for frameworks like FastAPI, Flask, or Django.",
+            "evidence_status": "unknown",
+            "evidence_documents": [],
+            "confidence": 0.95,
+            "question": "Are you familiar with FastAPI or other frameworks for deploying ML models? If yes, provide examples of deployments you have worked on.",
+            "category": "technical_skill",
+            "type": "nice_to_have"
+        },
+        {
+            "answer": "The candidate's CV does not explicitly mention Docker, AWS, GCP, Azure, or any related cloud services. Additionally, there is no mention of projects involving containerization or cloud-based ML deployments.",
+            "evidence_status": "unknown",
+            "evidence_documents": [],
+            "confidence": 1.0,
+            "question": "What is your experience with Docker and cloud platforms? Please describe any projects involving containerization or cloud-based ML deployments.",
+            "category": "technical_skill",
+            "type": "nice_to_have"
+        },
+        {
+            "answer": "The candidate explicitly mentions knowledge of natural language processing (NLP) and provides examples of projects in this area. Specifically, they developed a multi-class NLP system for poem classification using sentence embeddings and fine-tuned models, as well as a binary NLP application for spam detection involving text cleaning, TF-IDF vectorization, and classification evaluation. Additionally, they worked on an AI-powered e-learning agent involving LangChain, vector embeddings, and RAG (Retrieval-Augmented Generation), which are closely related to NLP and deep learning concepts. There is no explicit mention of deep learning frameworks like RNNs or transformers in the retrieved documents, but the candidate demonstrates strong NLP-related work.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Poem Genre Classification\nTech: Python, Scikit-learn, Pandas, NLTK, Streamlit, Sentence Embeddings, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/poem_classification  |  Demo: poemclassification.streamlit.app/\nDeveloped a multi-class NLP system that classifies poems into Affection, Death, Environment, and Music.\nPrepared and cleaned textual data, then fine-tuned a pre-trained sentence embedding model using similarity-based\nlearning to produce domain-specific semantic representations.\nUsed the resulting embeddings for downstream classification and evaluated the system using Accuracy, Precision,\nRecall, and F1-Score.\nDeployed the application as an interactive Streamlit web app.\nSpam Classification\nTech: Python, Scikit-learn, NLTK, Pandas, Streamlit, TF-IDF, NLP\nGitHub: github.com/Akchiche-Mohamed-Aymen/spam_detection_classifier  |  Demo: spamdetectionclassifier.streamlit.app/\nBuilt a binary NLP application to classify email and text messages as Spam or Not Spam (Ham).\nBuilt a binary NLP application to classify email and text messages as Spam or Not Spam (Ham).\nImplemented text cleaning, unnecessary-character removal, stemming, TF-IDF vectorization, and class-balancing\ntechniques.\nEvaluated classification performance using Accuracy, Precision, and Recall, with emphasis on detecting unwanted\nmessages while reducing false classifications.\nDeployed the application using Streamlit.",
+                "Engineering & Version Control:  Git, Data Preprocessing, Feature Engineering, Feature Selection, Missing Value\nHandling, Outlier Handling, Model Evaluation, Hyperparameter Tuning, Cross-Validation\nSELECTED AI & MACHINE LEARNING PROJECTS\nAI-Powered E-Learning Agent\nTech: Python, LangChain, LangGraph, Google Gemini, ChromaDB, RAG, Vector Embeddings, Tool Calling, Agent Memory\nGitHub: github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent\nDesigned  a  multi-agent  assistant  for  an  English  e-learning  platform  that  combines  LLM  reasoning,  structured\nlearning data, specialized tools, RAG, and conversational memory.\nBuilt a Main Agent to understand user requests, select appropriate tools, combine results, and generate context-\naware responses across student, course, exam, instructor, and educational-content use cases.\nImplemented  a  Retrieval-Augmented  Generation  pipeline  using  vector  embeddings  and  ChromaDB  to  retrieve"
+            ],
+            "confidence": 0.95,
+            "question": "Do you have knowledge of deep learning or natural language processing (NLP)? If yes, share examples of projects or tasks you have worked on in these areas.",
+            "category": "technical_skill",
+            "type": "nice_to_have"
+        },
+        {
+            "answer": "The candidate explicitly mentions GitHub in their CV, providing links to two projects hosted on GitHub: \n1. An AI-Powered E-Learning Agent project: [github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent](https://github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent).\n2. An Email Generator project: [github.com/Akchiche-Mohamed-Aymen/Email-generator](https://github.com/Akchiche-Mohamed-Aymen/Email-generator).\n\nThe candidate also references Git in the context of engineering and version control, though no explicit mention of branching, pull requests, or collaborative workflows is provided in the retrieved documents.",
+            "evidence_status": "medium",
+            "evidence_documents": [
+                "Engineering & Version Control: Git, Data Preprocessing, Feature Engineering, Feature Selection, Missing Value Handling, Outlier Handling, Model Evaluation, Hyperparameter Tuning, Cross-Validation SELECTED AI & MACHINE LEARNING PROJECTS AI-Powered E-Learning Agent Tech: Python, LangChain, LangGraph, Google Gemini, ChromaDB, RAG, Vector Embeddings, Tool Calling, Agent Memory GitHub: github.com/Akchiche-Mohamed-Aymen/e-learning-chat-agent Designed a multi-agent assistant for an English e-learning platform that combines LLM reasoning, structured learning data, specialized tools, RAG, and conversational memory. Built a Main Agent to understand user requests, select appropriate tools, combine results, and generate context-aware responses across student, course, exam, instructor, and educational-content use cases. Implemented a Retrieval-Augmented Generation pipeline using vector embeddings and ChromaDB to retrieve",
+                "Built a binary NLP application to classify email and text messages as Spam or Not Spam (Ham).\nImplemented text cleaning, unnecessary-character removal, stemming, TF-IDF vectorization, and class-balancing techniques.\nEvaluated classification performance using Accuracy, Precision, and Recall, with emphasis on detecting unwanted messages while reducing false classifications.\nDeployed the application using Streamlit.\nEmail Generator\nTech: LangChain, Google Gemini, Generative AI\nGitHub: github.com/Akchiche-Mohamed-Aymen/Email-generator  |  Demo: generate-email-with-ai.streamlit.app/\nDeveloped a Generative AI application that transforms user requirements into personalized professional emails."
+            ],
+            "confidence": 0.85,
+            "question": "Can you describe your experience with Git and software development best practices? Provide examples of how you manage code versioning or collaborate on projects.",
+            "category": "technical_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate explicitly demonstrates problem-solving and technical communication skills by designing and delivering a **Programming Fundamentals course** for university members with diverse academic backgrounds, including those with no prior computer science experience. They assessed participants' technical backgrounds and translated complex programming and software engineering concepts into accessible learning paths. This involved mentoring learners across different proficiency levels and demonstrating strong technical communication and instructional skills to explain technical concepts clearly to non-technical stakeholders.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Designed  and  delivered  a  Programming  Fundamentals  course  for  university  members  from  diverse  academic\\nbackgrounds, including learners with no prior computer science experience.\\nAssessed participants' technical backgrounds and translated programming and software engineering concepts into\\naccessible learning paths.\\nDeveloped curriculum materials combining theoretical concepts with practical exercises to strengthen problem-\\nsolving skills.\\nMentored  learners  across  different  proficiency  levels  and  demonstrated  strong  technical  communication  and\\ninstructional skills."
+            ],
+            "confidence": 0.95,
+            "question": "How do you analyze complex problems and communicate technical results clearly? Provide examples of how you have explained technical concepts to non-technical stakeholders or collaborated on solutions.",
+            "category": "soft_skill",
+            "type": "must_have"
+        },
+        {
+            "answer": "The candidate describes an end-to-end machine learning project in the **Customer Churn Prediction & Segmentation** application. This project involved the following stages:\n\n1. **Data Preprocessing**: The candidate performed data preprocessing and exploratory analysis to prepare customer data for predictive analytics.\n\n2. **Model Development**: While the exact modeling techniques are not detailed, the project involved feature engineering and model evaluation, implying development of predictive models.\n\n3. **Evaluation**: The candidate explicitly mentions model evaluation as part of the workflow.\n\n4. **Deployment**: The project was deployed as an interactive Streamlit application, enabling real-world usage.\n\n5. **Collaboration**: The use of LangChain and the Gemini API suggests integration with collaborative or AI-driven workflows, though explicit collaboration with a team is not detailed.\n\nThe project aligns closely with the evaluation criteria, covering most stages of an end-to-end ML pipeline.",
+            "evidence_status": "high",
+            "evidence_documents": [
+                "Developed an end-to-end banking analytics application for customer churn prediction, customer segmentation, and AI-generated retention recommendations.\nPerformed data preprocessing, exploratory analysis, feature engineering, and model evaluation to prepare customer data for predictive analytics.\nIntegrated LangChain and the Gemini API to generate personalized recommendations and retention strategies based on customer risk and segment information.\nBuilt and deployed an interactive Streamlit application."
+            ],
+            "confidence": 0.95,
+            "question": "Can you describe an end-to-end machine learning project you have worked on? Highlight your role in data preprocessing, model development, evaluation, deployment, and collaboration.",
+            "category": "experience",
+            "type": "nice_to_have"
+        }
+    ],
+    "score": 0.8778571428571428
+}

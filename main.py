@@ -76,5 +76,3 @@ def evaluate_cv():
                             json.dump(evaluation, f, indent=4, ensure_ascii=False)
                         raise Exception(f"Failed to evaluate Question {i+1} after 3 attempts. Process terminated. {str(e)}")
                         
-
-    
