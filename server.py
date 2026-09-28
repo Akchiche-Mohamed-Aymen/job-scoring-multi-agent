@@ -13,9 +13,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+base = '/v1/'
 #"C:/Users/SG INFO/Desktop/job-scoring-multi-agent/applicant/Mohamed_Aymen_Akchiche.pdf"
-@app.post("/v0/ingest")
+@app.post(f"{base}ingest")
 def ingest_cv(request: IngestRequest):
     try:
         msg = ingest_documents(request.file_path)
@@ -33,7 +33,7 @@ def ingest_cv(request: IngestRequest):
 
 
 
-@app.post("/v0/api_key")
+@app.post("f{base}api_key")
 def save_api_key(req: Key):
     try:
         with open("keys.json", "w" , encoding='utf-8') as f:
@@ -47,7 +47,7 @@ def save_api_key(req: Key):
             status_code=500,
             detail=str(e)
         )
-@app.post("/v0/job-profile")
+@app.post(f"{base}job-profile")
 def create_job_profile(request: JobProfileRequest):
     try:
         msg = structured_job_profile(
@@ -64,7 +64,7 @@ def create_job_profile(request: JobProfileRequest):
             status_code=500,
             detail=str(e)
         )
-@app.get("/v0/cv_evaluate")
+@app.get(f"{base}cv_evaluate")
 def match_cv():
     try:
         res = evaluate_cv()
