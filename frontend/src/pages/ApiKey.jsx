@@ -1,5 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import apiConfig from "../api.json";
+
+const API_URL = `${apiConfig.base}api_key`;
 
 function ApiKey() {
   const [mistral, setMistral] = useState("");
@@ -31,7 +34,7 @@ function ApiKey() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/v0/api_key",
+        API_URL,
         {
           mistral: mistralKey,
           hf: hfKey,

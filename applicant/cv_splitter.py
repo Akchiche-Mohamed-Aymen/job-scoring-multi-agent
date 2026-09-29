@@ -5,7 +5,7 @@ from langchain_mistralai import MistralAIEmbeddings
 from langchain_chroma import Chroma
 from dotenv import load_dotenv
 from langchain.tools import tool
-import os
+import os 
 load_dotenv()
 
 api_key = os.getenv("MISTRAL_API_KEY")
@@ -33,7 +33,7 @@ def load_documents(file_path):
             )
 
     return documents
-def chunk_documents(documents, chunk_size=1000, chunk_overlap=200):
+def chunk_documents(documents):
     semantic_splitter = SemanticChunker(
         embeddings=embeddings,
         breakpoint_threshold_type="percentile",
@@ -41,7 +41,7 @@ def chunk_documents(documents, chunk_size=1000, chunk_overlap=200):
     )
 
     return semantic_splitter.split_documents(documents)
-def store_chunks(chunks , collection_name="applicant_chunks", persist_directory="./chroma_db"):
+def store_chunks(chunks , collection_name="applicant_chunks", persist_directory="./applicant/chroma_db"):
     ids = [f'Document{chunks[i].metadata["page"]} chunk_{i}' for i in range(len(chunks))]
     db = Chroma(
         collection_name=collection_name,
@@ -59,6 +59,7 @@ def ingest_documents(file_path):
         store_chunks(chunks)
         return f"Stored {len(chunks)} chunks in the Chroma database"
     except Exception as e:
+        print(e)
         raise Exception(str(e))
 @tool
 def query_documents(query, collection_name="applicant_chunks", persist_directory="./applicant/chroma_db"):
@@ -71,7 +72,6 @@ def query_documents(query, collection_name="applicant_chunks", persist_directory
     k = 3
     results = db.similarity_search_with_score(query, k=k)
     evidence_documents = [doc.page_content for doc, _ in results]
-    print('retireved successfully from the Chroma database')
     return evidence_documents
 if __name__ == "__main__":
     ingest_documents(FILE_PATH)

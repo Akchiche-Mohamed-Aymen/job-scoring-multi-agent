@@ -1,6 +1,9 @@
 
 import { useState } from "react";
 import axios from "axios";
+import apiConfig from "../api.json";
+
+const API_URL = `${apiConfig.base}ingest`;
 
 function IngestCV() {
   const [filePath, setFilePath] = useState("");
@@ -23,7 +26,7 @@ function IngestCV() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/v0/ingest",
+        API_URL,
         {
           file_path: filePath,
         }

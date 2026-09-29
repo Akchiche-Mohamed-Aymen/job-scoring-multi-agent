@@ -1,5 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import apiConfig from "../api.json";
+
+const API_URL = `${apiConfig.base}job-profile`;
 
 function StructureJob() {
   const [jobTitle, setJobTitle] = useState("");
@@ -28,7 +31,7 @@ function StructureJob() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8000/v0/job-profile",
+        API_URL,
         {
           job_title: jobTitle,
           job_description: jobDescription,

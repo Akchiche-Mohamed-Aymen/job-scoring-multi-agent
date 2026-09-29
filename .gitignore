@@ -1,3 +1,36 @@
 .env
-/chroma_db
+/applicant/chroma_db
 keys.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
+
+# testing
+/frontend/coverage
+
+# production
+/frontend/build
+
+# misc
+/frontend/.DS_Store
+# misc
+/frontend/.env.local
+# misc
+/frontend/.env.development.local
+# misc
+/frontend/.env.test.local
+# misc
+/frontend/.env.production.local
+
+# misc
+/frontend/npm-debug.log*
+# misc
+/frontend/yarn-debug.log*
+# misc
+/frontend/yarn-error.log*
+/__pycache__
+/applicant/__pycache__
+/job/__pycache__

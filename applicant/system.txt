@@ -25,7 +25,7 @@ For each evaluation question:
 # RAG DOCUMENT PRESERVATION
 
 The documents returned by `query_documents` are authoritative CV evidence.
-
+For each question use the RAG tool only one time , the query must be exactly the question existed in the prompt , you must never decompose it 
 The LLM MUST NOT edit the retrieved documents in any way.
 
 The LLM MUST NOT:

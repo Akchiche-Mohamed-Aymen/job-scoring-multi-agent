@@ -1,5 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import apiConfig from "../api.json";
+
+const API_URL = `${apiConfig.base}cv_evaluate`;
 
 function MatchCV() {
   const [loading, setLoading] = useState(false);
@@ -12,9 +15,7 @@ function MatchCV() {
     setResult(null);
 
     try {
-      const response = await axios.get(
-        "http://localhost:8000/v0/cv_evaluate"
-      );
+      const response = await axios.get(API_URL);
 
 
       setResult(response.data);

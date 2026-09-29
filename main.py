@@ -61,12 +61,13 @@ def evaluate_cv():
                     print(f"\033[1;34mLLM goes to sleep for {s} seconds...\033[0m")
                     time.sleep(s)
                     i += 1
-                    return {
-                        "msg":"All questions evaluated successfully. Process completed.",
-                        "answers": evaluation["answers"],
-                        "score": score
-                        }
-                        
+                    if i == n :
+                        return {
+                            "msg":"All questions evaluated successfully. Process completed.",
+                            "answers": evaluation["answers"],
+                            "score": score
+                            }
+                            
                 except Exception as e:
                     print(f"\033[91m>>> Error From CV Agent ===> {e}\033[0m")
                     fail += 1
@@ -75,4 +76,5 @@ def evaluate_cv():
                         with open("./applicant/cv_evaluation.json", "w" , encoding='utf-8') as f:
                             json.dump(evaluation, f, indent=4, ensure_ascii=False)
                         raise Exception(f"Failed to evaluate Question {i+1} after 3 attempts. Process terminated. {str(e)}")
-                        
+    
+evaluate_cv()                    
