@@ -1,0 +1,111 @@
+{
+    "job_title": "Machine Learning Engineer",
+    "total_must_haves": 8,
+    "questions": [
+        {
+            "category": "education_cert",
+            "question": "Do you hold a Bachelor's or Master's degree in Computer Science, Artificial Intelligence, Data Science, or a related field?",
+            "eval_criteria": "Candidate must explicitly state possession of a Bachelor's or Master's degree in one of the specified fields.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Can you demonstrate strong Python programming skills, including experience with libraries like NumPy, Pandas, and Scikit-learn?",
+            "eval_criteria": "Candidate must explicitly list Python as a core skill and mention experience with NumPy, Pandas, and Scikit-learn in their CV.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "How do you apply machine learning concepts, such as model evaluation, feature engineering, and statistical analysis, in your work?",
+            "eval_criteria": "Candidate must describe practical experience with model evaluation metrics, feature engineering, and statistical analysis in their CV or work history.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "What experience do you have with Scikit-learn or similar machine learning frameworks for classification, regression, or prediction tasks?",
+            "eval_criteria": "Candidate must explicitly mention experience with Scikit-learn or comparable frameworks and specify tasks like classification, regression, or prediction.",
+            "type": "must_have",
+            "importance": "critical"
+        },
+        {
+            "category": "technical_skill",
+            "question": "How do you handle data preprocessing, feature engineering, and data validation in your machine learning workflows?",
+            "eval_criteria": "Candidate must describe hands-on experience with data preprocessing, feature engineering, and validation techniques in their CV.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Are you familiar with SQL and have experience working with structured datasets?",
+            "eval_criteria": "Candidate must explicitly state proficiency in SQL and mention experience with structured datasets.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Can you describe your experience with Git and software development workflows, including version control for machine learning projects?",
+            "eval_criteria": "Candidate must mention Git experience and its application in software development or ML project workflows.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Do you have experience deploying machine learning models through APIs or web applications?",
+            "eval_criteria": "Candidate must describe experience deploying ML models via APIs or web applications, even if basic.",
+            "type": "must_have",
+            "importance": "high"
+        },
+        {
+            "category": "technical_skill",
+            "question": "How do you develop and optimize APIs to integrate trained machine learning models into backend applications?",
+            "eval_criteria": "Candidate must provide examples or descriptions of API development for ML integration in their CV.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Can you share your experience with deep learning or natural language processing (NLP) techniques?",
+            "eval_criteria": "Candidate must explicitly mention experience with deep learning frameworks (e.g., TensorFlow, PyTorch) or NLP techniques.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Are you familiar with Docker and cloud-based deployment for machine learning models?",
+            "eval_criteria": "Candidate must describe experience with Docker or cloud platforms (e.g., AWS, GCP) for deploying ML models.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "How do you track experiments and manage the machine learning lifecycle in your projects?",
+            "eval_criteria": "Candidate must mention tools or methodologies for experiment tracking (e.g., MLflow, Weights & Biases) or lifecycle management.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "technical_skill",
+            "question": "Do you have experience working with large or unstructured datasets?",
+            "eval_criteria": "Candidate must describe experience handling large-scale or unstructured data (e.g., text, images) in their CV.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "How do you collaborate with software engineers and technical teams to deliver production-ready AI solutions?",
+            "eval_criteria": "Candidate must provide examples of cross-functional collaboration or mention experience integrating ML solutions with software systems.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        },
+        {
+            "category": "soft_skill",
+            "question": "How do you ensure reproducibility and maintain clear documentation for ML experiments, models, and datasets?",
+            "eval_criteria": "Candidate must describe practices for documentation, reproducibility, or version control of ML-related artifacts.",
+            "type": "nice_to_have",
+            "importance": "medium"
+        }
+    ]
+}

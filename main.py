@@ -76,5 +76,3 @@ def evaluate_cv():
                         with open("./applicant/cv_evaluation.json", "w" , encoding='utf-8') as f:
                             json.dump(evaluation, f, indent=4, ensure_ascii=False)
                         raise Exception(f"Failed to evaluate Question {i+1} after 3 attempts. Process terminated. {str(e)}")
-    
-evaluate_cv()                    
