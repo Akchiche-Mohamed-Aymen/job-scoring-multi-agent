@@ -12,6 +12,15 @@ The project focuses on building the complete AI pipeline, from processing unstru
 ![Vector Database](https://img.shields.io/badge/Vector_Database-4B0082?style=for-the-badge&logo=databricks&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+## 🎥 Demo
+
+### Video Preview
+
+Watch the application in action:
+
+<video src="" controls="controls" style="max-width: 100%;">
+</video>
 ## Project Goal
 
 The main goal of this project is to explore and implement an AI-based approach for CV-to-job matching while working with real-world, semi-structured documents.
