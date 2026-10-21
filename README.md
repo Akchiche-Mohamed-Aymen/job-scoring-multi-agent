@@ -19,7 +19,7 @@ The project focuses on building the complete AI pipeline, from processing unstru
 
 Watch the application in action:
 
-<video src="" controls="controls" style="max-width: 100%;">
+<video src="https://github.com/user-attachments/assets/42403efd-a651-48ff-8f74-5f14e92ca386" controls="controls" style="max-width: 100%;">
 </video>
 ## Project Goal
 
