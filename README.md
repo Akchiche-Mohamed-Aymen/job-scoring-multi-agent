@@ -5,7 +5,13 @@ An end-to-end AI-powered CV matching system designed to evaluate a candidate's C
 The project focuses on building the complete AI pipeline, from processing unstructured CV documents to generating structured job requirements and evaluating the candidate against them.
 
 ---
+## 🛠️ Tech Stack
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white)
+![Vector Database](https://img.shields.io/badge/Vector_Database-4B0082?style=for-the-badge&logo=databricks&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ## Project Goal
 
 The main goal of this project is to explore and implement an AI-based approach for CV-to-job matching while working with real-world, semi-structured documents.
