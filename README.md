@@ -19,9 +19,9 @@ The project focuses on building the complete AI pipeline, from processing unstru
 
 Watch the application in action:
 
-<video src="https://github.com/user-attachments/assets/42403efd-a651-48ff-8f74-5f14e92ca386" controls="controls" style="max-width: 100%;">
-</video>
-## Project Goal
+<video src="https://github.com/user-attachments/assets/42403efd-a651-48ff-8f74-5f14e92ca386" controls="controls" style="max-width: 100%;"></video>
+
+# Project Goal
 
 The main goal of this project is to explore and implement an AI-based approach for CV-to-job matching while working with real-world, semi-structured documents.
 
